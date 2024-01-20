@@ -1,0 +1,106 @@
+.div1{
+    background-color: rgb(171, 176, 183);
+    border-radius: 8px;
+    padding: 5px  ;
+    
+}
+
+.outer{
+    margin: 40px 100px 0px 100px;
+}
+
+.inner h3{
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
+#add{
+   background: rgb(184, 187, 191);
+   width: 6rem;
+   height: 2.5rem;
+}
+
+.lang{
+    height: 3rem;
+    width: 80%;
+    background-color: rgb(184, 187, 191);
+    border-radius: 6px;
+    border: none;
+    margin-left: 40px;
+}
+
+.minus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(184, 187, 191);
+    border-radius: 6px;
+    font-size: 30px;
+    border: none;
+}
+
+.urls{
+    height: 7.5rem;
+    width: 80%;
+    background-color: rgb(184, 187, 191);
+    border-radius: 6px;
+    border: none;
+    margin-right: 1.5rem;
+}
+
+.example{
+    height: 1.5rem;
+    width: 95%;
+    background-color: rgb(155, 159, 166);
+    border-radius: 8px;
+    border: none;
+    font-size: small;
+}
+
+#insideUrl{
+    background-color: white;
+    height: 2rem;
+    width: 95%;
+
+}
+
+
+.input-with-copy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+/* ============ */
+.input-with-copy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Set the width as needed */
+}
+
+.input-with-copy input {
+    width: 100%;
+    padding-right: 6em; /* Space for both symbols */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+    border: 1px solid #ccc; /* Optional: Add border for styling */
+}
+
+.input-with-copy .copy-icon,
+.input-with-copy .delete-icon {
+    position: absolute;
+    right: 3rem; /* Adjust the right position as needed */
+    color: #0a0a0a; /* Set the color of the symbols */
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.input-with-copy .delete-icon {
+    right: 2em; 
+}   
