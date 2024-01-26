@@ -1,6 +1,14 @@
+from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
 
+# Create your views here.
+def index(request):
+    return render(request, 'index.html')
+
+
+
+############    Web_Scraping with Library By MOHAN    ##########
 def extract_data_from_shami_innovation(url):
     try:
         # Set a user agent to mimic a web browser
