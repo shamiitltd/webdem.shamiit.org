@@ -8,7 +8,7 @@ def index(request):
 
 
 
-############    Web_Scraping with Library By MOHAN    ##########
+############    Web_Scraping with Library By @cmohan312002    ##########
 def extract_data_from_shami_innovation(url):
     try:
         # Set a user agent to mimic a web browser
@@ -17,7 +17,7 @@ def extract_data_from_shami_innovation(url):
         # Send a GET request to the specified URL with headers
         response = requests.get(url, headers=headers)
 
-        # Check if the request was successful (status code 200)
+        # Check if the request was successful  (status code 200)
         if response.status_code == 200:
             # Parse the HTML content using BeautifulSoup
             soup = BeautifulSoup(response.text, 'html.parser')
