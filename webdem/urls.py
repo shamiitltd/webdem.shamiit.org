@@ -1,5 +1,5 @@
 from django.urls import path
-from myapp import views
+from webdem import views
 
 urlpatterns = [
     path('',views.index , name="index"),
