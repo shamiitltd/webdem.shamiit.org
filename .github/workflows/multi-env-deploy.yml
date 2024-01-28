@@ -166,7 +166,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./release/
-          server-dir: "./htdocs/${{ secrets.FTP_SERVER }}/"
           exclude: |
             **/.git*
             **/.git*/**
@@ -234,7 +233,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./release/
-          server-dir: "./htdocs/${{ secrets.FTP_SERVER }}/"
           exclude: |
             **/.git*
             **/.git*/**
