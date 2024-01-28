@@ -136,6 +136,14 @@ jobs:
             rm release.zip
           EOF
 
+      - name: Restart the server
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
+            cd "htdocs/${{ secrets.FTP_SERVER }}"
+            nohup python3 manage.py runserver "${{ env.SERVER_PORT }}" &
+            kill -s SIGINT $(lsof -t -i:"${{ env.SERVER_PORT }}") && nohup  python3 manage.py runserver "${{ env.SERVER_PORT }}" & 
+          EOF
+
   QUALITYANALYSIS:
     name: Deploy in QA
     runs-on: ubuntu-latest
