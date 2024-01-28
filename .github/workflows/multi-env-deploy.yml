@@ -143,8 +143,8 @@ jobs:
             python3 -m pip3 install --upgrade pip3
             pip3 install Django
             pip3 install -r requirements.txt
-            nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
-            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
+            nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} && exit 
+            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} && exit
           EOF
 
   QUALITYANALYSIS:
@@ -211,8 +211,8 @@ jobs:
             python3 -m pip3 install --upgrade pip3
             pip3 install Django
             pip3 install -r requirements.txt
-            nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
-            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
+            nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} && exit
+            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} && exit
           EOF
 
   PRODUCTION:
@@ -279,8 +279,8 @@ jobs:
             python3 -m pip3 install --upgrade pip3
             pip3 install Django
             pip3 install -r requirements.txt
-            nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
-            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
+            nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} && exit
+            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} && exit
           EOF
             
   MIGRATION-READY:
