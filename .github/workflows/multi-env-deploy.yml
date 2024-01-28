@@ -308,7 +308,7 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
             cd "htdocs/${{ secrets.FTP_SERVER }}"
-            python manage.py migrate
+            python3 manage.py migrate
           EOF
           
   SEED-TEST:
@@ -321,7 +321,7 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
             cd "htdocs/${{ secrets.FTP_SERVER }}"
-            python manage.py migrate
+            python3 manage.py migrate
           EOF
 
   MIGRATION-QA:
@@ -334,7 +334,7 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
             cd "htdocs/${{ secrets.FTP_SERVER }}"
-            python manage.py migrate
+            python3 manage.py migrate
           EOF
           
   SEED-QA:
@@ -347,7 +347,7 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
             cd "htdocs/${{ secrets.FTP_SERVER }}"
-            python manage.py migrate
+            python3 manage.py migrate
           EOF
 
   MIGRATION-PROD:
@@ -360,7 +360,7 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
             cd "htdocs/${{ secrets.FTP_SERVER }}"
-            python manage.py migrate
+            python3 manage.py migrate
           EOF
           
   SEED-PROD:
@@ -373,6 +373,6 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
             cd "htdocs/${{ secrets.FTP_SERVER }}"
-            python manage.py migrate
+            python3 manage.py migrate
           EOF
           
