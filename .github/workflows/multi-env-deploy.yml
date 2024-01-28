@@ -32,7 +32,7 @@ jobs:
       - name: Cleaning ${{ matrix.environment }} ftp server
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}" << 'EOF'
-            cd "${{ secrets.FTP_SERVER }}"
+            cd "htdocs/${{ secrets.FTP_SERVER }}"
             [ "$(basename "$(pwd)")" = "${{ secrets.FTP_SERVER }}" ] && rm -rf ./*
           EOF
 
