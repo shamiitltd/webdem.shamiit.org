@@ -2,6 +2,7 @@
 /public/hot
 .env
 .env.backup
+/.env
 .phpunit.result.cache
 phpcs.xml
 Homestead.json

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-g)q-y3o%$pj*lvh0djt0(f89^fqhro2h$czd^g#$zvpdv1&5v6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['test.webdem.shamiit.org', 'www.test.webdem.shamiit.org', 'qa.webdem.shamiit.org', 'www.qa.webdem.shamiit.org', 'webdem.shamiit.org', 'www.webdem.shamiit.org']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    'webdem',
 ]
 
 MIDDLEWARE = [
