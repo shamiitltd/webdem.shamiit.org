@@ -143,9 +143,8 @@ jobs:
             python3 -m pip3 install --upgrade pip3
             pip3 install Django
             pip3 install -r requirements.txt
-            nohup python3 manage.py runserver 8091 & 
             nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} & 
-            kill -s SIGINT $(lsof '-t -i:${{ env.SERVER_PORT }}') && nohup  'python3 manage.py runserver ${{ env.SERVER_PORT }} & '
+            kill -s SIGINT $(lsof '-t -i:${{ env.SERVER_PORT }}') && nohup python3 manage.py runserver ${{ env.SERVER_PORT }} & 
           EOF
 
   QUALITYANALYSIS:
