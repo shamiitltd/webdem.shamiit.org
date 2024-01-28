@@ -144,7 +144,7 @@ jobs:
             pip3 install Django
             pip3 install -r requirements.txt
             nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} > /dev/null 2>&1 & 
-            #kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} > /dev/null 2>&1 & 
+            kill -s SIGINT $(lsof -t -i:${{ vars.SERVER_PORT }}) && nohup python3 manage.py runserver ${{ vars.SERVER_PORT }} > /dev/null 2>&1 & 
           EOF
 
   QUALITYANALYSIS:
