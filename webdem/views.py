@@ -38,3 +38,39 @@ def extract_data_from_shami_innovation(url):
 # Example usage:
 shami_innovation_url = "https://shamiit.com/"
 extract_data_from_shami_innovation(shami_innovation_url)
+
+
+############# Webscrapping Without library By @talib ##################
+import requests
+
+def fetchdata(path,url):
+    # Get request of Url
+    r=requests.get(url)
+    with open(path,"w")as f:
+        f.write(r.text)
+        
+def fetchtag(path):
+    #  Open the HTML file
+    with open(path, 'r') as file:
+        html_content = file.read()
+    #  Find the starting and ending positions of each <p> tag
+    start_tag ='<p>'
+    end_tag ='</p>'
+    start_positions = [pos + len(start_tag) for pos in range(len(html_content)) if html_content.startswith(start_tag, pos)]
+    end_positions = [pos for pos in range(len(html_content)) if html_content.startswith(end_tag, pos)]
+    # Step 3: Extract text content between <p> tags
+    paragraphs = []
+    for start_pos, end_pos in zip(start_positions, end_positions):
+        paragraph_text = html_content[start_pos:end_pos].strip()
+        paragraphs.append(paragraph_text)
+    # Step 4: Print the scraped text
+    for i, paragraph in enumerate(paragraphs):
+        print(f"Paragraph {i + 1}: {paragraph}")
+        print("Starting positions:", start_positions)
+        print("Ending positions:", end_positions)
+
+# sample usage
+file ="sample.html"
+url="https://shamiit.com/"
+fetchdata(file,url)  
+fetchtag(file)
