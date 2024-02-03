@@ -16,7 +16,7 @@ def extract_data_from_shami_innovation(url):
 
         # Send a GET request to the specified URL with headers
         response = requests.get(url, headers=headers)
-
+# hiii
         # Check if the request was successful  (status code 200)
         if response.status_code == 200:
             # Parse the HTML content using BeautifulSoup
