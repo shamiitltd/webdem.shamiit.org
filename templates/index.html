@@ -11,7 +11,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="static\css/abc.css" />
   </head>
 
@@ -48,60 +51,124 @@
           <a href="#" class="nav-link link-body-emphasis px-2">Support</a>
         </li>
         <div class="text-end me-3">
-          <button type="button" class="btn btn-light text-dark me-2">
-            Login
+          <button type="button" class="btn text-dark me-2">
+            <b>Log-in</b>
           </button>
-          <button type="button" class="btn btn-primary">Sign-Up</button>
+          <button type="button" class="btn btn-primary p-1 signup">
+            Sign-up
+          </button>
         </div>
       </ul>
     </header>
 
     <div class="outer">
-      <div class="d-flex">
-        <h2 class="me-3">Table Name:</h2>
-
-        <div class="d-flex align-items-center justify-content-center div1">
-          <div class="inner">
-            <input type="text">
+      <div class="d-flex t1">
+        <h3 class="me-3">Table Name :</h3>
+        <div class="form-group ms-3">
+          <label for="input1" class="tableInput"> Table Name </label>
+          <select
+            class="form-select"
+            id="inputGroupSelect03"
+            aria-label="Example select with button addon"
+          >
+            <option selected>Input</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="catform d-flex mt-1">
+        <h3>Category From :</h3>
+        <div class="radio mt-2 d-flex">
+          <div class="form-check me-4">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              New
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Existing
+            </label>
           </div>
         </div>
       </div>
-      <div class="d-flex gap-3 py-4">
-        <h2>Category & Keyword:</h2>
 
-        <button type="button" class="btn" id="add">
-          <strong>+ Add</strong>
-        </button>
-      </div>
+      <div class="container middle">
+        <div class="three">
+          <div class="d-flex gap-3 py-3 mb-2 addCat">
+            <button type="button" class="btn plus" id="add">
+              <strong>+</strong>
+            </button>
+            <h4 class="ms-4 mt-2">Add Category</h4>
+          </div>
 
-      <div class="container">
+          <!-- Individual div elements with the same properties -->
 
-        <!-- Individual div elements with the same properties -->
-        <div class="catNames d-flex align-items-center justify-content-center mb-4">
-            <input type="text" class="lang me-3" />
+          <div class="catNames d-flex align-items-center mb-4">
             <button class="minus"><b>-</b></button>
-        </div>
-
-        <div class="catNames d-flex align-items-center justify-content-center mb-4">
-            <input type="text" class="lang me-3" />
-            <button class="minus"><b>-</b></button>
-        </div>
-
-        <div class="catNames d-flex align-items-center justify-content-center mb-4">
-            <div type="text" class="urls " >
-                <h5 class="ms-3">Use {} to enter category name to genrate URL patterns</h5>
-                <div class="example ms-4">
-                    <p class="ms-2"><b>Example URL pattern- https://www.fiverr.com/search/gigs?query={category_name1}&source={main_banner}</b></p>
+            <div class="lang">
+              <div
+                class="inputcontainer"
+                style="display: flex; align-items: center"
+              >
+                <div class="form-group ms-3 me-2">
+                  <label for="input1" class="tableInput"> Category_name </label>
+                  <input
+                    type="text"
+                    placeholder="Input"
+                    class="catSearch"
+                    id="idcat"
+                  />
                 </div>
-                <div class="input-with-copy">
-                    <input type="text" id="insideUrl" class="lang ms-4 mt-3" />
-                    <i class="fas fa-copy copy-icon me-2"></i>
-                    <i class="fas fa-times delete-icon"></i>
-                </div>
-                
+                <span class="pipe me-2">|</span>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      {% comment %}
+      <div
+        class="catNames d-flex align-items-center justify-content-center mb-4"
+      >
+        <button class="minus"><b>-</b></button>
+        <input type="text" class="lang me-3" />
+      </div>
+      {% endcomment %}
 
+      <div class="Urlbox d-flex align-items-center justify-content-center mb-4">
+        <div type="text" class="urls">
+          <h5 class="ms-3">
+            Use {} to enter category name to genrate URL patterns
+          </h5>
+          <div class="example ms-4">
+            <p class="ms-2">
+              <b
+                >Example URL pattern-
+                https://www.fiverr.com/search/gigs?query={category_name1}&source={main_banner}</b
+              >
+            </p>
+          </div>
+          <div class="input-with-copy">
+            <input type="text" id="insideUrl" class="lang ms-4 mt-3" />
+            <i class="fas fa-copy copy-icon me-3"></i>
+            <i class="fas fa-times delete-icon bg-primary cross"></i>
+          </div>
+        </div>
+      </div>
+      <button class="genratebtn">Genrate URLs</button>
     </div>
 
     <script
@@ -109,5 +176,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="static\js/main.js"></script>
   </body>
 </html>
