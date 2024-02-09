@@ -1,60 +1,117 @@
-.div1{
-    background-color: rgb(171, 176, 183);
-    border-radius: 8px;
-    padding: 5px  ;
-    
+.signup{
+  height: 2rem;
 }
+
+.t1{
+    margin-left: 2.5rem;
+}
+
+
+.tableInput {
+    margin-left: 12px; 
+    margin-left: 15px;                                
+    margin-top: -12px; 
+    position: absolute;                                
+    background-color: white; 
+    border: 2px solid white;
+    font-size: x-small;
+  }
+  
+
+
+#inputGroupSelect03{
+    height: 2.5rem;
+    border-radius: 5px;
+    border-color: #D9D9D9;
+    width: 16rem;
+    border-color: #4591CA;
+}
+
+
 
 .outer{
     margin: 40px 100px 0px 100px;
 }
 
-.inner h3{
-    background-color: white;
-    border-radius: 5px;
+.form-check-input{
+    border-color: black;
     
 }
 
-#add{
-   background: rgb(184, 187, 191);
-   width: 6rem;
-   height: 2.5rem;
+.radio{
+    margin-left: 2rem;
+}
+
+
+#add {
+    background:#4489ef;
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+/* .addCat{
+    margin-left: 2.3rem;
+} */
+
+.middle{
+    float: left;
+}
+.update{
+    margin-left: 5rem;
 }
 
 .lang{
     height: 3rem;
-    width: 80%;
-    background-color: rgb(184, 187, 191);
+    width: 88%;
+    background-color: #F5F5F5;
     border-radius: 6px;
     border: none;
-    margin-left: 40px;
+    margin-left: 45px;
 }
 
 .minus{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3rem;
-    width: 3rem;
-    background-color: rgb(184, 187, 191);
+    width: 45px;
+    height: 45px;
+    background-color: #F5F5F5;
     border-radius: 6px;
     font-size: 30px;
     border: none;
+    color: #3383FF;
 }
+
+
 
 .urls{
     height: 7.5rem;
     width: 80%;
-    background-color: rgb(184, 187, 191);
+    background-color: #F5F5F5;
     border-radius: 6px;
     border: none;
     margin-right: 1.5rem;
 }
 
+.catSearch{
+    border-radius: 5px;
+}
+
+
+
+#idcat{
+    border-color: #3383FF;
+}
+
 .example{
     height: 1.5rem;
     width: 95%;
-    background-color: rgb(155, 159, 166);
+    background-color: #D9D9D9;
     border-radius: 8px;
     border: none;
     font-size: small;
@@ -77,13 +134,94 @@
 
 
 
+.catInput{
+    height: 100%;
+    width: 83%;
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+.inputcontainer{
+    display: inline-block;
+    height: 3rem;
+    
+}
+
+.three{
+    margin-left: 8rem;
+}
+
+.catBox p{
+    width: 8rem;
+    background-color: transparent;
+    height: 2rem;
+    border: solid rgb(44, 40, 40);
+    border-radius: 6px;
+    padding: 2px;
+    padding-left: 4px;
+    margin-top: 6px 
+}
+
+.pipe{
+    font-size: 1.5rem;
+    padding-bottom: 6px;
+    color: #3383FF;
+    padding-right: 2px;
+}
+
+#inputField{
+    margin-left: 5px;
+}
+
+/* .catNames{
+    margin-left: 5.7rem;
+} */
+
+.Urlbox{
+    margin-left: 8.5rem;
+    width: 95%;
+}
+
+#catEle{
+    border-radius: 50%;
+}
+
+.containerEle{
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.html-text{
+    margin-right: 3px;
+}
+
+.cross{
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 2px;
+    
+}
+.fa-times:before {
+    display: inline-block;
+    content: "\f00d";
+    color: rgb(245, 238, 238);
+    border-radius: 50%;
+    background-color: #3383FF;
+}
+
 /* ============ */
 .input-with-copy {
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%; /* Set the width as needed */
+    width: 97%; /* Set the width as needed */
 }
+
+
 
 .input-with-copy input {
     width: 100%;
@@ -102,5 +240,15 @@
 }
 
 .input-with-copy .delete-icon {
-    right: 2em; 
+    right: 1em; 
 }   
+
+.genratebtn{
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: 25rem;
+    background-color:#3383FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
