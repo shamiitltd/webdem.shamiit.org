@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const formGroup = document.createElement('div');
       formGroup.classList.add('form-group', 'ms-3', 'me-2');
-
+    // responsive label
       const label = document.createElement('label');
       label.setAttribute('for', 'input1');
       label.classList.add('tableInput');
       label.textContent = 'Category_name';
-
+    // input
       const input = document.createElement('input');
       input.setAttribute('type', 'text');
       input.setAttribute('placeholder', 'Input');
