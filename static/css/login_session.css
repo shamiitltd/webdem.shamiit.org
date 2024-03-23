@@ -1,0 +1,117 @@
+/* Body styles */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures the container is centered vertically within the viewport */
+    margin: 0;
+    background-color: cadetblue;
+}
+
+/* Container styles */
+.container {
+    color: initial;
+    width: 80rem;
+    height: 32rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background: rgba(0.5, 0.5, 0.5, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgb(2 34 34);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    border: 0.5px solid;
+}
+
+/* Divider styles */
+.divider {
+    border-right: 1px solid #ccc;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Divider bottom styles */
+.divider-bt {
+    border-top: 1px solid #ccc;
+}
+
+/* Right side styles */
+.right {
+    height: 30rem;
+}
+
+/* Button styles */
+.mybtn {
+    border-radius: 50px;
+    width: 100%;
+}
+
+/* List container styles */
+.list-container {
+    max-height: 300px; /* Set a maximum height for the list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Set a thin scrollbar (Firefox) */
+    scrollbar-color: transparent transparent; /* Set scrollbar color to transparent (Firefox) */
+}
+
+/* List group styles */
+.list-group {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* List group item styles */
+.list-group-item {
+    padding: 8px;
+}
+
+/* Hover effect on list items */
+.contact-item:hover {
+    color: purple; /* Change text color to purple on hover */
+}
+
+/* Click effect on list items */
+.contact-item:active {
+    font-weight: 600;
+    color: darkpurple; /* Change text color to dark purple when clicked */
+}
+
+/* Transparent background styles */
+.transparent-background {
+    background-color: transparent;
+    color: initial;
+    font-weight: 400;
+    border: 1px solid lightgrey !important; /* Initially transparent border */
+}
+
+/* Placeholder styles */
+.transparent-background::placeholder {
+    color: lightgrey;
+}
+
+/* Focus styles for transparent background */
+.transparent-background:focus {
+    background-color: transparent !important; /* Change background color on focus */
+    border-color: transparent !important; /* Change border color on focus */
+}
+
+/* Transparent list item styles */
+.transparent-list .list-group-item {
+    background-color: transparent;
+    color: initial;
+}
+
+/* Hover effect on transparent list items */
+.transparent-list .list-group-item:hover {
+    background-color: transparent !important; /* Change background color on hover if needed */
+    color: #ffff;
+    font-weight: 600;
+}
