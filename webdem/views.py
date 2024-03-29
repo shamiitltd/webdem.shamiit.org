@@ -5,9 +5,6 @@ from bs4 import BeautifulSoup
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-def layer1(request):
-    pass
-    return render(request, 'layer1.html')
 
 
 
