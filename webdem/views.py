@@ -6,7 +6,8 @@ from bs4 import BeautifulSoup
 def index(request):
     return render(request, 'index.html')
 
-
+def layer3_UI(request):
+    return render(request, 'layer3_UI.html')
 
 ############    Web_Scraping with Library By @cmohan312002    ##########
 def extract_data_from_shami_innovation(url):
