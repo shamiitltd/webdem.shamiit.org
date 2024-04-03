@@ -88,45 +88,57 @@
                             style="border-radius:  var(--bs-border-radius);background-color: #E5E5E5;color: black;font-weight: 500;padding-inline: 1.5rem;">
                             Filter <i class="bi bi-funnel" style="margin-left: 10px;"></i>
                         </button>
-                        
-                            <div class="row dropdown-menu flex-column shadow bg-body-tertiary rounded">
-                                <div class="col d-flex justify-content-center align-items-center mb-2">
-                                    <button type="button" class="btn btn-primary btn-sm me-2" onclick="replicateDropdown()"><img src="/static/images/plus-15.png"></button>
-                                    <div class="btn-group filterbtn me-2">
-                                        <button type="button" class="btn dropdown-toggle btn-sm" onclick="toggleDropdown('columnDropdownMenu', event)"
-                                            style="border-radius:  var(--bs-border-radius);color: black;font-weight: 500;padding-inline: 1.5rem;">
-                                            Select Column
-                                        </button>
-                                        <ul class="dropdown-menu flex-column shadow bg-body-tertiary rounded" id="columnDropdownMenu" style="display: none;">
-                                            <li><a class="dropdown-item" href="#">Client's name</a></li>
-                                            <li><a class="dropdown-item" href="#">Email</a></li>
-                                            <li><a class="dropdown-item" href="#">Position</a></li>
-                                            <li><a class="dropdown-item" href="#">Mobile</a></li>    
-                                        </ul>
+
+                        <div class="row dropdown-menu flex-column shadow bg-body-tertiary rounded" id="filterDropdown">
+                            <div class="col d-flex mb-2 mainfilter">
+                                <button type="button" class="btn btn-primary btn-sm me-2" onclick="replicateDropdown()"
+                                    style="height: 2rem;">
+                                    <img src="/static/images/plus-15.png">
+                                </button>
+                                <div class="col d-flex flex-column filterbtnalign">
+                                    <div class="col d-flex px-0 pb-2" id="valuebtn">
+                                        <div class="btn-group filterbtn me-2">
+                                            <button type="button" class="btn dropdown-toggle btn-sm"
+                                                onclick="toggleDropdown('columnDropdownMenu', event)"
+                                                style="border-radius:  var(--bs-border-radius);color: black;font-weight: 500;padding-inline: 1.5rem;">
+                                                Select Column
+                                            </button>
+                                            <ul class="dropdown-menu flex-column shadow bg-body-tertiary rounded"
+                                                id="columnDropdownMenu" style="display: none;">
+                                                <li><a class="dropdown-item" href="#">Client's name</a></li>
+                                                <li><a class="dropdown-item" href="#">Email</a></li>
+                                                <li><a class="dropdown-item" href="#">Position</a></li>
+                                                <li><a class="dropdown-item" href="#">Mobile</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group filterbtn">
+                                            <button type="button" class="btn dropdown-toggle btn-sm"
+                                                onclick="toggleDropdown('operatorDropdownMenu', event)"
+                                                style="border-radius:  var(--bs-border-radius);color: black;font-weight: 500;padding-inline: 1.5rem;">
+                                                Operator
+                                            </button>
+                                            <ul class="dropdown-menu flex-column shadow bg-body-tertiary rounded"
+                                                id="operatorDropdownMenu" style="display: none;">
+                                                <li><a class="dropdown-item" href="#">Like %</a></li>
+                                                <li><a class="dropdown-item" href="#">Not Equal !=</a></li>
+                                                <li><a class="dropdown-item" href="#">Equal =</a></li>
+
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="btn-group filterbtn">
-                                        <button type="button" class="btn dropdown-toggle btn-sm" onclick="toggleDropdown('operatorDropdownMenu', event)"
-                                            style="border-radius:  var(--bs-border-radius);color: black;font-weight: 500;padding-inline: 1.5rem;">
-                                            Operator
-                                        </button>
-                                        <ul class="dropdown-menu flex-column shadow bg-body-tertiary rounded" id="operatorDropdownMenu" style="display: none;">
-                                            <li><a class="dropdown-item" href="#">Like %</a></li>
-                                            <li><a class="dropdown-item" href="#">Not Equal !=</a></li>
-                                            <li><a class="dropdown-item" href="#">Equal =</a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col" id="valuebtn" style="padding-left: 3.3rem;">
-                                <button type="button" class="btn btn-sm filterbtn" style="width: 100%;color: black;font-weight: 500;">Value</button>
-                                </div>
-                                <hr class="dropdown-divider">
-                                <div class="col d-flex justify-content-evenly align-items-center">
-                                    <button type="button" class="btn btn-primary btn-sm">Apply Filter</button>
-                                    <button type="button" class="btn btn-outline-dark btn-sm">Clear Filter</button>
+                                    <button type="button" class="btn btn-sm filterbtn"
+                                        style="width: 100%;color: black;font-weight: 500;">Value</button>
                                 </div>
                             </div>
-                        
+
+                            <hr class="dropdown-divider">
+                            <div class="col d-flex justify-content-evenly align-items-center">
+                                <button type="button" class="btn btn-primary btn-sm">Apply Filter</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm">Clear Filter</button>
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <div class="exportbtn ms-5">

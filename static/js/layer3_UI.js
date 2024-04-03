@@ -27,20 +27,44 @@ function toggleDropdown(dropdownId, event) {
 }
 
 
+// Replica script
+
+
 function replicateDropdown() {
-    var dropdownContainer = document.querySelector('.d-flex.mb-2'); // Get the container of the dropdown elements
-    var clonedDropdown = dropdownContainer.cloneNode(true); // Clone the dropdown container
-    var plusButton = clonedDropdown.querySelector('.btn-primary'); // Get the plus button
-    plusButton.innerHTML = '<img src="/static/images/minus-15.png">'; // Change the image source to minus
-    plusButton.removeEventListener('click', replicateDropdown); // Remove the event listener from the plus button
-    plusButton.addEventListener('click', removeReplicatedDropdown); // Add event listener to the minus button
-    plusButton.setAttribute('onclick', 'removeReplicatedDropdown()'); // Add onclick attribute to the minus button
-    dropdownContainer.parentNode.insertBefore(clonedDropdown, dropdownContainer.nextSibling); // Insert the cloned dropdown after the original dropdown
+    // Get the mainfilter element
+    var mainfilter = document.querySelector('.mainfilter');
+
+    // Get the HTML content of the section to clone
+    var cloneHTML = mainfilter.innerHTML;
+
+    // Create a new div element to hold the cloned section
+    var cloneDiv = document.createElement('div');
+
+    // Set the class of the cloneDiv to match the original div
+    cloneDiv.className = 'col d-flex mb-2 mainfilter';
+
+    // Set the HTML content of the cloneDiv
+    cloneDiv.innerHTML = cloneHTML;
+
+    // Change the image source to "/static/images/minus-15.png"
+    var cloneButton = cloneDiv.querySelector('button.btn-primary img');
+    var minusButton = cloneDiv.querySelector('button.btn');
+    cloneButton.src = '/static/images/minus-15.png';
+    minusButton.classList.remove('btn-primary'); // Remove btn-primary class
+    minusButton.style.backgroundColor = '#E5E5E5'; // Set background color directly
+
+    
+
+    // Add event listener to the cloned button to remove the clone
+    cloneButton.parentNode.onclick = function() {
+        cloneDiv.remove();
+    };
+
+    // Insert the cloned div after the mainfilter element
+    mainfilter.insertAdjacentElement('afterend', cloneDiv);
 }
 
-function removeReplicatedDropdown() {
-    this.parentNode.remove(); // Remove the replicated dropdown when the minus button is clicked
-}
-
-// Initial event listener to replicate the dropdown when the plus button is clicked
-document.querySelector('.btn-primary').addEventListener('click', replicateDropdown);
+// Prevent dropdown from closing when clicking inside it
+document.getElementById('filterDropdown').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
