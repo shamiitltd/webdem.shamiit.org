@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 from .forms import UploadFileForm
 from .models import ImportedData
 import pandas as pd
+from django.http import HttpResponseBadRequest
+import os
+import requests
 
 # Create your views here.
 
@@ -13,26 +16,67 @@ def upload_file(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             file = request.FILES['file']
-            df = pd.read_excel(file)
-            headers = df.columns.tolist()
-            data = df.values.tolist()
+            
+            # File Size Validation
+            if file.size == 10 * 1024 or file.size > 15 * 1024 * 1024:
+                return HttpResponseBadRequest('File size must be between 10KB and 15MB')
 
-            # Save data to database
-            for row in data:
-                ImportedData.objects.create(
-                    name=row[0],
-                    email=row[1],
-                    position=row[2],
-                    mobile=row[3]
-                )
+            # File Type Validation
+            file_name, file_extension = os.path.splitext(file.name)
+            if file_extension.lower() != '.xlsx':
+                if file_extension.lower() == '.pdf':
+                    return HttpResponseBadRequest('Invalid file type. PDF files are not allowed.')
+                else:
+                    return HttpResponseBadRequest('Invalid file type. Only Excel files (.xlsx) are allowed.')
 
-            # Retrieve data from the database
-            imported_data = ImportedData.objects.all()
+            # Virus/Malware Scan (Optional)
+            api_key = 'f535ac6ad3b81a18336e016f8aa836c9e5799ec5a2979a1b6983c5793af6350c'
+            url = 'https://www.virustotal.com/vtapi/v2/file/scan'
+            params = {'apikey': api_key}
+            files = {'file': (file.name, file.read())}
+            try:
+                response = requests.post(url, files=files, params=params)
+                result = response.json()
+                response_code = result.get('response_code')
+                if response_code == 1:
+                    positives = result.get('positives', 0)
+                    if positives > 0:
+                        return HttpResponseBadRequest('The file may contain malware. Proceed with caution.')
+                elif response_code == -2:
+                    return HttpResponseBadRequest('The file has not been scanned by VirusTotal yet. Try again later.')
+                else:
+                    return HttpResponseBadRequest('An error occurred while scanning the file.')
 
-            return render(request, 'imported_table.html', {'headers': headers, 'data': imported_data})
+            except requests.exceptions.RequestException as e:
+                return HttpResponseBadRequest(f'VirusTotal API error: {e}')
+            
+            # Read Excel file and process data
+            try:
+                df = pd.read_excel(file)
+                headers = df.columns.tolist()
+                data = df.values.tolist()
+
+                # Save data to database
+                ImportedData.objects.all().delete()  # Clear existing data
+                for row in data:
+                    ImportedData.objects.create(
+                        name=row[0],
+                        email=row[1],
+                        position=row[2],
+                        mobile=row[3]
+                    )
+
+                # Retrieve data from the database
+                imported_data = ImportedData.objects.all()
+
+                return render(request, 'imported_table.html', {'headers': headers, 'data': imported_data})
+
+            except Exception as e:
+                return HttpResponseBadRequest(f'Error processing file: {e}')
+
     else:
         form = UploadFileForm()
-    return render(request, 'upload_file.html', {'form': form})
+    return render(request, 'upload.html', {'form': form})
 
 
 
