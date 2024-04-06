@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 from .forms import UploadFileForm
 from .models import ImportedData
 import pandas as pd
-from django.http import HttpResponseBadRequest
+from django.http import HttpResponseBadRequest , HttpResponse
 import os
 import requests
-
+from openpyxl import Workbook
 # Create your views here.
 
 
@@ -79,8 +79,46 @@ def upload_file(request):
     return render(request, 'upload.html', {'form': form})
 
 
+# Export data in excel sheet
+def show_html_table(request):
+    pass
+    return render(request, 'layer3_UI.html')
 
+def export_data_to_excel(request):
+    # Get the HTML content from your template file
+    with open('templates/layer3_UI.html', 'r') as file:
+        html_content = file.read()
 
+    # Parse the HTML content using BeautifulSoup
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Find the table element
+    table = soup.find('table')
+
+    # Extract data from the table
+    data = []
+    for row in table.find_all('tr'):
+        row_data = []
+        for cell in row.find_all(['th', 'td']):
+            row_data.append(cell.get_text().strip())
+        data.append(row_data)
+
+    # Create a new workbook
+    wb = Workbook()
+    ws = wb.active
+
+    # Populate the Excel sheet with the extracted data
+    for row in data:
+        ws.append(row)
+
+    # Prepare the response
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = 'attachment; filename=my_data.xlsx'
+
+    # Save the workbook to the response
+    wb.save(response)
+
+    return response
 
 
 # def index(request):
