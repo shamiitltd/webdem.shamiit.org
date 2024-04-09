@@ -1,0 +1,341 @@
+.contentrow {
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.col {
+    flex: 1 0 0%;
+    display: flex;
+    margin-bottom: 1rem;
+    
+}
+
+.leftcol {
+    text-align: end;
+    padding-right: 2rem;
+}
+
+
+.signup{
+    height: 2rem;
+  }
+  
+  .t1{
+      margin-left: 2.5rem;
+  }
+  
+  
+  .tableInput {
+      margin-left: 12px; 
+                                    
+      margin-top: -10px; 
+      position: absolute;                                
+      background-color: white; 
+      border: 2px solid white;
+      font-size: x-small;
+      padding-inline: 3px;
+    }
+    
+  
+  
+  #inputGroupSelect03{
+      height: 2.5rem;
+      border-radius: 5px;
+      border-color: #D9D9D9;
+      width: 16rem;
+      border-color: #4591CA;
+  }
+  
+  
+  
+  .outer{
+      margin: 40px 100px 0px 100px;
+  }
+  
+  .form-check-input{
+      border-color: black;
+      
+  }
+  
+  .radio{
+      margin-left: 2rem;
+  }
+  
+  
+  #add {
+      background:#4489ef;
+      width: 45px;
+      height: 45px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding-top: 0px;
+      border-radius: 10px;
+    }
+  
+  /* .addCat{
+      margin-left: 2.3rem;
+  } */
+  
+  .middle{
+      float: left;
+  }
+  .update{
+      margin-left: 5rem;
+  }
+  
+  .lang{
+      height: 60px;
+      width: 80%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 6px;
+      border: 1px solid #858C94;
+  }
+  
+  .minus{
+      background-color: #E9E9E9;
+      width: 45px;
+      height: 45px;
+      font-size: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4489ef;
+      padding-top: 0px;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      border: none;
+   
+  }
+  
+
+  .urls{
+      height: 7.5rem;
+      width: 100%;
+      
+      border-radius: 6px;
+      border: 1px solid #858C94;;
+      
+  }
+  
+  .catSearch{
+      border-radius: 5px;
+  }
+  #idcat{
+      box-shadow: 0px 1px 0px #3383FF;
+      border: 1px solid grey;
+      padding-inline: 11px;
+     
+     
+     }
+  
+  .example{
+      height: 1.5rem;
+      width: 75%;
+      background-color: #E9E9E9;
+      border-radius: 8px;
+      border: none;
+      font-size: small;
+      padding: .5px;
+  }
+  
+  .example p{
+      margin-top: 4px;
+      font-size: 11px;
+  }
+  
+  #insideUrl{
+      background-color: white;
+      height: 2rem;
+      width: 95%;
+      border: 1px solid #3383FF;
+  
+  }
+  
+  
+  .input-with-copy {
+      position: relative;
+      display: flex;
+      align-items: center;
+      
+  }
+  
+  
+  
+  .catInput{
+      height: 100%;
+      width: 83%;
+      background-color: transparent;
+      border: none;
+      float: right;
+  }
+  
+  .inputcontainer{
+      display: inline-block;
+      height: 1rem;
+      
+  }
+  
+  .three{
+      margin-left: 8rem;
+  }
+  
+  .catBox p{
+      width: 8rem;
+      background-color: transparent;
+      height: 2rem;
+      border: solid rgb(44, 40, 40);
+      border-radius: 6px;
+      padding: 2px;
+      padding-left: 4px;
+      margin-top: 6px 
+  }
+  
+  .pipe{
+      font-size: 1.5rem;
+      padding-bottom: 6px;
+      padding-right: 2px;
+      color: #3383FF;
+  }
+  
+  #inputCategory{
+      width: 75%;
+      height: 90%;
+      outline: none;
+      border: 1px solid transparent;
+      padding: 8px;
+  }
+  
+  #inputField{
+      margin-left: 5px;
+  }
+  
+  /* .catNames{
+      margin-left: 5.7rem;
+  } */
+  
+  .Urlbox{
+      margin-left: 8.5rem;
+      width: 95%;
+  }
+  
+  #catEle{
+      border-radius: 50%;
+  }
+  
+  .containerEle{
+      border: 1px solid #000;
+      padding: 5px;
+      border-radius: 8px;
+      margin-right: 10px;
+  }
+  .html-text{
+      margin-right: 3px;
+  }
+  
+  .cross{
+      height: 20px;
+      width: 20px;
+      border-radius: 3px;
+      text-align: center;
+      padding: 2px;
+      
+  }
+  .fa-times:before {
+      display: inline-block;
+      content: "\f00d";
+      color: rgb(245, 238, 238);
+      border-radius: 50%;
+      background-color: #3383FF;
+  }
+  
+  /* ============ */
+  .input-with-copy {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 97%; /* Set the width as needed */
+  }
+  
+  
+  
+  .input-with-copy input {
+      width: 100%;
+      padding-right: 6em; /* Space for both symbols */
+      border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+      border: 1px solid #ccc; /* Optional: Add border for styling */
+  }
+  
+  .input-with-copy .copy-icon,
+  .input-with-copy .delete-icon {
+      position: absolute;
+      right: 3rem; /* Adjust the right position as needed */
+      color: #0a0a0a; /* Set the color of the symbols */
+      cursor: pointer;
+      margin-top: 1rem;
+  }
+  
+  .input-with-copy .delete-icon {
+      right: 1em; 
+  }   
+  
+
+  
+  /* Category Input  */
+  #category_input{
+      width: 14rem;
+      height: 2.3rem;
+      box-shadow: 0px 1px 0px #3383FF;
+      
+  }
+  
+  .form-group{
+      padding-top: 3px;
+  }
+  
+  .isEqual{
+      font-weight: 700;
+      font-size: 28px;
+  }
+  
+  .cat_tables{
+      height: 2rem;
+      width: 8rem;
+      border:solid black;
+      border-radius: 5px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      padding-top: 12px;
+      margin-top: 5px
+  }
+  
+  .categoryForms{
+      display: flex;
+  }
+  
+  .tableInputEX{
+  
+      margin-left: 12px;
+      margin-left: 15px;
+      margin-top: -10px;
+      position: absolute;
+      background-color: white;
+      border: 2px solid white;
+      font-size: x-small;
+  }
+ 
+  .genratebtn {
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #3383FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

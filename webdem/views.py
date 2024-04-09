@@ -1,6 +1,10 @@
 from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import *
+from .serializers import *
 
 # Create your views here.
 def index(request):
@@ -38,3 +42,47 @@ def extract_data_from_shami_innovation(url):
 # Example usage:
 shami_innovation_url = "https://shamiit.com/"
 extract_data_from_shami_innovation(shami_innovation_url)
+
+
+# Post Api
+
+class studentapi(APIView):
+    serializer_class=studentSerializer
+    def get(self,request):
+        allstudent=student.objects.all().values()
+        return Response({"Message":"List of student", "student List":allstudent})
+
+    def post(self,request):
+        print('Request data is : ',request.data)
+        serializer_obj=studentSerializer(data=request.data)
+        if(serializer_obj.is_valid()):
+
+         student.objects.create(student_id=serializer_obj.data.get("student_id"),
+                            student_name=serializer_obj.data.get("student_name"),
+                            created_at=serializer_obj.data.get("created_at"),
+                            # updated_at=serializer_obj.data.get("updated_at"),
+                            # deleted_at=serializer_obj.data.get("deleted_at"),
+                            )
+
+        student1=student.objects.all().filter(student_id=request.data["student_id"]).values()
+        return Response({"Message":"New student Added!", "student":student1})
+    def delete(self,request):
+        print('Request data is : ',request.data)
+        serializer_obj=studentSerializer(data=request.data)
+        if(serializer_obj.is_valid()):
+
+         student.objects.delete(student_id=serializer_obj.data.get("student_id"),
+                            student_name=serializer_obj.data.get("student_name"),
+                            created_at=serializer_obj.data.get("created_at"),
+                            # updated_at=serializer_obj.data.get("updated_at"),
+                            # deleted_at=serializer_obj.data.get("deleted_at"),
+                            )
+
+        student1=student.objects.all().filter(student_id=request.data["student_id"]).values()
+        return Response({"Message":"New student Added!", "student":student1})    
+
+
+
+    
+
+    # views.py
