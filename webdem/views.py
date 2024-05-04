@@ -11,7 +11,7 @@ from openpyxl import Workbook
 # Create your views here.
 
 
-def upload_file(request):
+def uploadfile(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
@@ -80,11 +80,11 @@ def upload_file(request):
 
 
 # Export data in excel sheet
-def show_html_table(request):
+def showhtmltable(request):
     pass
     return render(request, 'layer3_UI.html')
 
-def export_data_to_excel(request):
+def exportdatatoexcel(request):
     # Get the HTML content from your template file
     with open('templates/layer3_UI.html', 'r') as file:
         html_content = file.read()
@@ -127,7 +127,7 @@ def export_data_to_excel(request):
 
 
 ############    Web_Scraping with Library By @cmohan312002    ##########
-def extract_data_from_shami_innovation(url):
+def extractdatafromshamiinnovation(url):
     try:
         # Set a user agent to mimic a web browser
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
@@ -155,4 +155,4 @@ def extract_data_from_shami_innovation(url):
 
 # Example usage:
 shami_innovation_url = "https://shamiit.com/"
-extract_data_from_shami_innovation(shami_innovation_url)
+extractdatafromshamiinnovation(shami_innovation_url)
