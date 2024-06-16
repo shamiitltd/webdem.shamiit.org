@@ -1,0 +1,491 @@
+/* Import color variables */
+@import url('color.css');
+
+/* Global styles */
+:root {
+    /* Font Palette */
+    --headingFont: 'Montserrat', sans-serif;
+    --bodyFont: 'Roboto', sans-serif;
+
+    /* border-radius  */
+    --theme-br: 8px;
+    --widget-br: 10px;
+}
+
+/* Font Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--headingFont);
+}
+
+p,
+li,
+span {
+    font-family: var(--bodyFont);
+}
+
+/* Color Styles */
+body {
+    background-color: var(--backgroundColor);
+    color: var(--text-color);
+}
+
+.link-body-emphasis{
+    color: var(--text-color) !important; 
+}
+.link-body-emphasis:hover{
+    color: var(--primary-color) !important;
+}
+.table  {
+    --bs-table-bg: var(--backgroundColor); /* background color*/
+
+    --bs-emphasis-color: var(--text-color);/*text color*/
+
+    
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.inputbox {
+    border: 1px solid var(--placeholdercolor);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: var(--theme-br);
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+.inputbox input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.inputbox input:focus{
+    outline: none;
+}
+
+#selectedEntries{
+    color: var(--text-color);
+}
+
+#primary-color-picker{
+    border-color: var(--placeholdercolor);
+}
+
+#loginBtn{
+    color: var(--text-color) !important;
+    font-weight: var(--bs-nav-link-font-weight);
+}
+
+.outline-dark-btn{
+    border: 2px solid var(--placeholdercolor) !important;
+    color: var(--text-color) !important;
+}
+
+.outline-dark-btn:hover {
+    background-color: #c92424 !important;
+    color: var(--text-color) !important;
+}
+
+.pagination .page-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.plus-widget {
+    background: var(--primary-color);
+    width: 35px;
+    height: 35px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    padding-top: 0px;
+    border-radius: var(--widget-br);
+    border: none;
+}
+
+.plus-widget:hover {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+.minus-widget {
+    background: var(--secondary-color);
+    width: 35px;
+    height: 35px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    padding-top: 0px;
+    border-radius: var(--widget-br);
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn {
+    border-radius: var(--theme-br);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 500;
+    padding-inline: 0.5rem;
+    padding-block: 5px;
+    border: none;
+}
+
+.primary-btn:hover {
+    border-radius: var(--theme-br);
+    background-color: var(--outlineDarkcolor);
+    border: 1px solid var(--btnPrimarycolor);
+    color: var(--text-color);
+    font-weight: 500;
+    padding-inline: 0.5rem;
+}
+
+.secondary-btn {
+    border-radius: var(--theme-br) !important;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 500;
+    padding-inline: 1.5rem;
+    padding-block: 5px;
+    border: none;
+}
+
+.outline-dark-btn {
+    border-radius: var(--theme-br);
+    background-color: var(--outlineDarkcolor);
+    border: 1px solid black;
+    color: black;
+    font-weight: 500;
+    /* padding-inline: 1.5rem; */
+}
+
+.outline-dark-btn:hover {
+    border-radius: var(--theme-br);
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-weight: 500;
+    padding-inline: 1.5rem;
+}
+
+/* layer1  */
+
+.contentrow {
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.col {
+    flex: 1 0 0%;
+    display: flex;
+    margin-bottom: 1rem;
+
+}
+
+.leftcol {
+    text-align: end;
+    padding-right: 2rem;
+}
+
+
+.t1 {
+    margin-left: 2.5rem;
+}
+
+
+.inputlabel {
+    margin-left: 12px;
+    margin-top: -8px;
+    position: absolute;
+    background-color: var(--backgroundColor);
+    /* border: 2px solid white; */
+    font-size: x-small;
+    padding-inline: 3px;
+    color: var(--text-color);
+}
+
+
+
+.dropdowninput {
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: var(--backgroundColor) !important;
+    border-color: #D9D9D9;
+    color: var(--text-color);
+    width: 16rem;
+    border-color: var(--placeholdercolor);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: var(--text-color) !important;
+}
+
+.page-link {
+    color: var(--text-color) !important;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: var(--backgroundColor) !important;
+    border: 2px solid var(--placeholdercolor);
+}
+
+
+
+.outer {
+    margin: 40px 100px 0px 100px;
+}
+
+.form-check-input {
+    border-color: black;
+
+}
+
+.radio {
+    margin-left: 2rem;
+}
+
+
+.middle {
+    float: left;
+}
+
+.update {
+    margin-left: 5rem;
+}
+
+.lang {
+    width: 80%;
+    border-radius: 6px;
+    border: 1px solid #858C94;
+    padding-block: 10px;
+}
+
+.urls {
+    height: 7.5rem;
+    width: 100%;
+
+    border-radius: 6px;
+    border: 1px solid #858C94;
+    ;
+
+}
+
+.catSearch {
+    border-radius: 5px;
+}
+
+.example {
+    height: 1.5rem;
+    width: 75%;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    border: none;
+    font-size: small;
+    padding: .5px;
+    color: var(--text-color);
+}
+
+.example p {
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+#insideUrl {
+    background-color: transparent;
+    height: 2rem;
+    width: 95%;
+    border: 1px solid var(--primary-color);
+    padding-inline: 8px;
+    color: var(--text-color);
+}
+
+
+.input-with-copy {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.catInput {
+    height: 100%;
+    width: 83%;
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+.inputcontainer {
+    display: inline-block;
+    height: 3rem;
+
+}
+
+.three {
+    margin-left: 8rem;
+}
+
+.catBox p {
+    width: 8rem;
+    background-color: transparent;
+    height: 2rem;
+    border: solid rgb(44, 40, 40);
+    border-radius: 6px;
+    padding: 2px;
+    padding-left: 4px;
+    margin-top: 6px
+}
+
+.pipe {
+    font-size: 2.5rem;
+    padding-right: 2px;
+    color: var(--primary-color);
+    
+}
+
+#inputCategory {
+    width: 75%;
+    height: 90%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 8px;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+#inputField {
+    margin-left: 5px;
+}
+
+/* .catNames{
+      margin-left: 5.7rem;
+  } */
+
+.Urlbox {
+    margin-left: 8.5rem;
+    width: 95%;
+}
+
+#catEle {
+    border-radius: 50%;
+}
+
+.containerEle {
+    border: 1px solid var(--placeholdercolor);
+    padding: 5px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.html-text {
+    margin-right: 3px;
+}
+
+.cross {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 2px;
+
+}
+
+.fa-times:before {
+    display: inline-block;
+    content: "\f00d";
+    color: rgb(245, 238, 238);
+    border-radius: 50%;
+    background-color: #3383FF;
+}
+
+/* ============ */
+.input-with-copy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 97%;
+    /* Set the width as needed */
+}
+
+
+
+.input-with-copy input {
+    width: 100%;
+    padding-right: 6em;
+    /* Space for both symbols */
+    border-radius: 5px;
+    /* Optional: Add border-radius for rounded corners */
+    border: 1px solid #ccc;
+    /* Optional: Add border for styling */
+}
+
+.input-with-copy .copy-icon,
+.input-with-copy .delete-icon {
+    position: absolute;
+    right: 3rem;
+    /* Adjust the right position as needed */
+    color: #0a0a0a;
+    /* Set the color of the symbols */
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.input-with-copy .delete-icon {
+    right: 1em;
+}
+
+.form-group {
+    padding-top: 3px;
+}
+
+.isEqual {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.cat_tables {
+    height: 2rem;
+    width: 8rem;
+    border: solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    margin-top: 5px
+}
+
+.categoryForms {
+    display: flex;
+}
+
+.tableInputEX {
+
+    margin-left: 12px;
+    margin-left: 15px;
+    margin-top: -10px;
+    position: absolute;
+    background-color: white;
+    border: 2px solid white;
+    font-size: x-small;
+}

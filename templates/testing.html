@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% block container %}
+<div class="container-fuild mt-5 mx-3 ps-3">
+    <div class="row contentrow">
+        <div class="col-md-9" >
+            <div class="lang">
+                <div class="inputcontainer" style="display: flex; align-items: center">
+                    <div class="form-group ms-3 me-2 mb-0">
+                        <label for="input1" class="inputlabel"> Category_name </label>
+                        <input type="text" placeholder="Input" class="dropdowninput" id="idcat" />
+                    </div>
+                    <span class="pipe">|</span>
+
+                    <input type="text" placeholder="Enter Skills" class="enter" id="inputCategory" />
+
+
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+
+        <div class="card mb-3" style="max-width: 640px;margin-right: 5rem;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="/static/images/testing.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8" style="font-family: 'Poppins', sans-serif;">
+                    <div class="card-body d-flex flex-column justify-content-between" style="height: 100%;">
+                        <h5 class="card-title d-flex align-items-center" style="font-size: 22px;font-weight: 500;margin-bottom: 0;"><span id="like"
+                                style="padding-inline: 6px;background-color: black;border-radius: 8px;padding-block: 2px;margin-right: 5px;display: flex;align-items: center;"><i
+                                    class="fa-solid fa-thumbs-up" style="color: white;width: 16px;"></i></span>Braintone</h5>
+                        <div class="ratings d-flex align-items-center"><span id="like"
+                                style="padding-inline: 8px;background-color: #058a07;color:white;border-radius: 8px;padding-block: 2px;margin-right: 5px;">4.5</span><i
+                                class="fa-solid fa-star" style="color: #ff6e00;"></i>&nbsp;<i class="fa-solid fa-star"
+                                style="color: #ff6e00;"></i>&nbsp;<i class="fa-solid fa-star"
+                                style="color: #ff6e00;"></i>&nbsp;<i class="fa-solid fa-star"
+                                style="color: #ff6e00;"></i>&nbsp;<i class="fa-solid fa-star-half"
+                                style="color: #ff6e00;"></i> <span style="color: #717171;margin-left: 15px;">34 Ratings</span></div>
+                        <div class="d-flex align-items-center"><i class="fa-solid fa-location-dot"
+                                style="margin-inline: 5px;"></i><strong>Irla-vile parle West, Mumbai</strong></div>
+                        <div class="smButtons d-flex">
+                            <div style="
+                            border: 1px solid #eaeaea;border-radius: 6px; height: 22px;padding: 0 7px;font-size: 12px;font-weight: 500; margin: 0 10px 0 0;; background-color: #dfdfdf !important;color: #111;"  onmouseover="this.style.backgroundColor='#e8e8e8';" onmouseout="this.style.backgroundColor='#f7f7f7'">Computer Dealers</div>
+                            <div style="border: 1px solid #eaeaea;border-radius: 6px; height: 22px;padding: 0 7px;font-size: 12px;font-weight: 500; margin: 0 10px 0 0;; background-color: #dfdfdf !important;color: #111;"  onmouseover="this.style.backgroundColor='#e8e8e8'" onmouseout="this.style.backgroundColor='#f7f7f7'">Laptop Dealers</div>
+                        </div>
+                        <div class="contactinfo d-flex align-items-center">
+                            <div class="phone" style="background-color: #058a07;padding-inline: 10px;font-weight: 500;font-size: 15px;color: white;padding-block: 5px;border-radius: 5px;margin-right: 10px;"><i class="fa-solid fa-phone" style="color: white;margin-right: 5px;"></i><span id="phone">07405666476</span></div>
+                            <div class="deal" style="background-color: #41a9ff;padding-inline: 10px;font-weight: 500;font-size: 15px;color: white;padding-block: 5px;border-radius: 5px;margin-right: 10px;"><span id="deal">Get Best Deal</span></div>
+                            <div class="whatsapp" style="background-color: #dfdfdf;color: black;padding-block: 5px;padding-inline: 10px; border-radius: 5px;margin-right: 10px;"><i class="fa-brands fa-whatsapp" style="margin-right: 5px;color: #058a07;"></i><span id="chat">Chat</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+{% endblock %}

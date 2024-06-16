@@ -1,0 +1,83 @@
+/* Theme definitions for different color schemes */
+
+/* Default Theme */
+body {
+    --primary-color: #007bff; /* Default primary color (blue) */
+    --secondary-color: #E9E9E9; /* Default secondary color (gray) */
+    --text-color: #212529; /* Default text color (dark) */
+    --placeholdercolor: #858C94; /* Default placeholder color */
+    --backgroundColor: #ffff;
+}
+
+/* Dark Theme */
+body.dark-theme {
+   --text-color: #ffff;
+   --backgroundColor: #212529; 
+   --primary-color: #6c5ce7; 
+   --secondary-color: #a29bfe;
+  
+ }
+
+/* Purple Theme */
+body.purple-theme {
+    --primary-color: #6c5ce7; /* Main purple color */
+    --secondary-color: #a29bfe; /* Lighter purple */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
+
+/* Green Theme */
+body.green-theme {
+    --primary-color: #00b894; /* Main green color */
+    --secondary-color: #9df3db; /* Lighter green */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
+
+/* Red Theme */
+body.red-theme {
+    --primary-color: #ff6347; /* Main red color */
+    --secondary-color: #ffccbc; /* Lighter red */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
+
+/* Orange Theme */
+body.orange-theme {
+    --primary-color: #ff9800; /* Main orange color */
+    --secondary-color: #ffe0b2; /* Lighter orange */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
+
+
+/* Teal Theme */
+body.teal-theme {
+    --primary-color: #20c997; /* Main teal color */
+    --secondary-color: #64d8cb; /* Lighter teal */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
+
+/* Pink Theme */
+body.pink-theme {
+    --primary-color: #e83e8c; /* Main pink color */
+    --secondary-color: #f7a9b3; /* Lighter pink */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
+
+/* Blue Theme */
+body.blue-theme {
+    --primary-color: #3498db; /* Main blue color */
+    --secondary-color: #85c1e9; /* Lighter blue */
+    --text-color: #000000; /* Black text */
+    --placeholdercolor: #858C94; /* Placeholder color */
+    --backgroundColor: #ffff;
+}
