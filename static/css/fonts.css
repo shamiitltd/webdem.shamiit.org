@@ -1,0 +1,72 @@
+/* Fonts */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font for body */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Font for headings */
+}
+
+/* Navigation */
+.navbar-brand,
+.navbar-nav li a {
+    font-family: 'Roboto', sans-serif; /* Font for navbar */
+}
+
+/* Form */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    font-family: 'Roboto', sans-serif; /* Font for form fields */
+}
+
+/* Buttons */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    font-family: 'Roboto', sans-serif; /* Font for buttons */
+}
+
+/* Links */
+a {
+    font-family: 'Roboto', sans-serif; /* Font for links */
+}
+
+/* Footer */
+.footer {
+    font-family: 'Roboto', sans-serif; /* Font for footer */
+}
+
+/* Sidebar */
+.sidebar {
+    font-family: 'Roboto', sans-serif; /* Font for sidebar */
+}
+
+/* Card */
+.card {
+    font-family: 'Roboto', sans-serif; /* Font for card */
+}
+
+/* Modal */
+.modal {
+    font-family: 'Roboto', sans-serif; /* Font for modal */
+}
+
+/* List */
+ul, ol {
+    font-family: 'Roboto', sans-serif; /* Font for lists */
+}
+
+/* Table */
+table {
+    font-family: 'Roboto', sans-serif; /* Font for tables */
+}
+
+/* Alert */
+.alert {
+    font-family: 'Roboto', sans-serif; /* Font for alerts */
+}
